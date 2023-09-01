@@ -1,23 +1,9 @@
-import { useState } from "react"
+import "./App.css"
+import LoginPage from "./components/pages/LoginPage"
 
 function App() {
-  //state (étatn données)
-  const [bienvenue, setPrenom] = useState("BK")
-  const [count, setCount] = useState(1)
+return <LoginPage/>
 
-  // comportements
-  const handleClick = () => {
-    setCount(count + 1)
-  }
-
-  //affichage(render (rendu) )
-  return (
-  <div>
-    <h1>Bienvenue chez nous ! </h1>
-    <p>{count}</p>
-    <button placeholder="Entre votre prénom..." >Acceder a votre espace</button>
-  </div> 
-  )
 }
 
 export default App
