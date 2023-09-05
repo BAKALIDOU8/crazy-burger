@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function LoginForm() {
     // state
     const [inputValue, setInputValue] = useState("")
+    const navigate = useNavigate()
 
     // comportement
     const handleSubmit = (event) => {
         event.preventDefault()
-        alert(`Bonjour ${inputValue}`)
         setInputValue("")
+        navigate(`./order/${inputValue}`)
     }
     const handleChange = (event) => {
         setInputValue(event.target.value)
@@ -23,7 +24,6 @@ export default function LoginForm() {
             <h2>Connecter-vous</h2>
             <input value={inputValue} onChange={handleChange} type="texte" placeholder="Entrez votre prenom..." required></input>
             <button>Acceder a votre espace</button>
-            <Link to="./order">Vers OrderPage</Link>
         </form>
     )
 }

@@ -6,9 +6,9 @@ import Erreurpage from "./components/pages/erreur/Erreurpage"
 
 function App() {
 return ( <Routes>
-    <Route exact path="/" element= { <LoginPage/> } /> 
-    <Route exact path="/order" element= { <OrderPage/> } />  
-    <Route exact path="/erreur" element= { <Erreurpage/> } />  
+    <Route path="/" element= { <LoginPage/> } /> 
+    <Route path="/order/:username" element= { <OrderPage/> } />  
+    <Route path="*" element= { <Erreurpage/> } />  
 </Routes>
 )
 }
