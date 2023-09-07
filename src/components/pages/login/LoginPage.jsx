@@ -20,7 +20,7 @@ const LoginPageStyled = styled.div`
   align-items: center;
   flex-direction: column;
   ::before{
-    content: "avant";
+    content: "";
     background: url(/public/img/burger-background.jpg) ;
     background-size: cover;
     background-position: center;
