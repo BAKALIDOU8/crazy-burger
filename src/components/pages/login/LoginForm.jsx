@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styled from 'styled-components';
+import {BsPersonCircle} from "react-icons/bs"
+
 
 export default function LoginForm() {
     // state
@@ -23,7 +25,10 @@ export default function LoginForm() {
             <h1>Bienvenue chez nous !</h1>
             <hr />
             <h2>Connecter-vous</h2>
-            <input value={inputValue} onChange={handleChange} type="texte" placeholder="Entrez votre prenom..." required></input>
+            <div className="input-with-icon">
+                <BsPersonCircle className='icon' />
+                <input value={inputValue} onChange={handleChange} type="texte" placeholder="Entrez votre prenom..." required></input>
+            </div>
             <button>Acceder a votre espace</button>
         </LoginFormStyled>
     )
@@ -59,4 +64,34 @@ const LoginFormStyled = styled.form`
     color: white;
     font-size: 36px;
   }
+
+  .input-with-icon{
+    background-color: #FFF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    margin: 18px 0;
+    
+    .icon{
+        font-size: 15px;
+        margin-right: 8px;
+        color: #93A2B1;
+    }
+
+    input{
+        border: none;
+        font-size: 15px;
+        color: #17161A;
+    }
+
+    &::placeholder{
+        background: white;
+        color: lightgrey;
+        
+    }
+  }
+
+
+
 `;
