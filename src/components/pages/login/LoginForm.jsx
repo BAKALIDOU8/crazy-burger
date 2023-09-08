@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styled from 'styled-components';
 import {BsPersonCircle} from "react-icons/bs"
+import {IoChevronForward} from "react-icons/io5"
 
 
 export default function LoginForm() {
@@ -26,16 +27,19 @@ export default function LoginForm() {
             <hr />
             <h2>Connecter-vous</h2>
             <div className="input-with-icon">
-                <BsPersonCircle className='icon' />
-                <input value={inputValue} onChange={handleChange} type="texte" placeholder="Entrez votre prenom..." required></input>
+            <BsPersonCircle className='icon' />
+                <input value={inputValue} onChange={handleChange} type="texte" placeholder="Entrez votre prenom..." required></input>                
             </div>
-            <button>Acceder a votre espace</button>
+            <button className="button-with-icon">                
+               <span>Acceder a votre espace</span>
+               <IoChevronForward className='icon' /> 
+            </button>
+            
         </LoginFormStyled>
     )
 }
 
 const LoginFormStyled = styled.form`
-  background: green;
   display: flex;
   flex-direction: column;
 
@@ -58,7 +62,7 @@ const LoginFormStyled = styled.form`
     font-size: 48px;
   }
 
-  h1{
+  h2{
     color: #8E8B8B;
     margin: 20px 10px 10px;
     color: white;
@@ -92,6 +96,49 @@ const LoginFormStyled = styled.form`
     }
   }
 
+  .button-with-icon{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 1;
 
+    padding: 18px 24px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    background-color: #FF9F1B;
+    border: 1px solid #FF9F1B;
+  }
 
+  &:hover:not(:disabled){
+    color: #FF9F1B;
+    transition: all 200ms ease-out;
+  }
+
+  &:disabled{
+    opacity: 0.6;
+  }
+
+  .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+
+  button {
+    cursor: pointer;
+    transition: 0.8s;
+  }
+
+  button:hover{
+    background-color: white;
+    color: #FF9F1B;
+  }
 `;
