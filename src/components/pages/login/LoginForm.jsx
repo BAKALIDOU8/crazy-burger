@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import styled from 'styled-components';
 import {IoChevronForward} from "react-icons/io5"
 import {BsPersonCircle} from "react-icons/bs"
-import Input from './Input';
+import TextInput from '../../reusable-ui/TextInput';
 
 
 
@@ -25,15 +25,14 @@ export default function LoginForm() {
     //render
     return (
         <LoginFormStyled action="submit" onSubmit={handleSubmit}>
-            <h1>Bienvenue chez nous !</h1>
-            <hr />
-            <h2>Connecter-vous</h2>
-            <Input value={inputValue} onChange={handleChange} placeholder={"Entrez votre prénom"} required Icon={<BsPersonCircle className='icon' />}/>
-            <button className="button-with-icon">                
-               <span>Acceder a votre espace</span>
-               <IoChevronForward className='icon' /> 
-            </button>
-            
+                <h1>Bienvenue chez nous !</h1>
+                <hr />
+                <h2>Connecter-vous</h2>
+            <TextInput value={inputValue} onChange={handleChange} placeholder={"Entrez votre prénom"} required Icon={<BsPersonCircle className='icon' />}/>
+                <button className="button-with-icon">                
+                <span>Acceder a votre espace</span>
+                <IoChevronForward className='icon' /> 
+                </button>           
         </LoginFormStyled>
     )
 }
