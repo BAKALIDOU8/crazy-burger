@@ -23,12 +23,6 @@ const InputStyled = styled.div`
     padding: 18px 24px;
     margin: 18px 0;
     
-    .icon{
-        font-size: 15px;
-        margin-right: 8px;
-        color: #93A2B1;
-    }
-
     input{
         border: none;
         font-size: 15px;
