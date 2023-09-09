@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { theme } from '../../theme';
 export default function Logo() {
   return ( <LogoStyled>
     
@@ -13,14 +14,14 @@ export default function Logo() {
 }
 
 const LogoStyled = styled.div`
-  color: white;
+  color: ${theme.colors.white};
   display: flex;
   align-items: center;
   
 h1{
     display: inline;
     text-align: center;
-    color: #FFA01B;
+    color: ${theme.colors.primary};
     font-size: 90px;
     line-height: 1em;
     font-weight: 700;

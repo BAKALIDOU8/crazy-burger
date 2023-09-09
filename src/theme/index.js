@@ -16,6 +16,7 @@ const colors = {
   greySemiDark: "#93a2b1",
   greyDark: "#6f737e",
   greyBlue: "#747b91",
+  loginHr : "#F56A2C"
 }
 
 const spacing = {

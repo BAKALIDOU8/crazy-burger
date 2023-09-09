@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { theme } from '../../theme';
 
 export default function TextInput({ value , onChange , Icon , ...restProps }) {
   return (
@@ -16,8 +17,8 @@ export default function TextInput({ value , onChange , Icon , ...restProps }) {
 }
 
 const InputStyled = styled.div`
-    background-color: #FFF;
-    border-radius: 5px;
+    background-color: ${theme.colors.white};
+    border-radius: ${theme.borderRadius.round};
     display: flex;
     align-items: center;
     padding: 18px 24px;
@@ -25,13 +26,13 @@ const InputStyled = styled.div`
     
     input{
         border: none;
-        font-size: 15px;
-        color: #17161A;
+        font-size: ${theme.fonts.P0};
+        color: ${theme.colors.dark};
     }
 
     &::placeholder{
-        background: white;
-        color: lightgrey;
+        background: ${theme.colors.white};
+        color: ${theme.colors.greyLight};
     }
 
 `
