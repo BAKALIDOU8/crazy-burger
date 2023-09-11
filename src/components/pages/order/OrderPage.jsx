@@ -11,13 +11,13 @@ export default function OrderPage() {
   // comportements
 
   //render
-  return ( 
-  <OrderPageStyled>
-    <div className="container">
-      <NavBar username={username} />
-      <Main/>
-    </div>
-  </OrderPageStyled>
+  return (
+    <OrderPageStyled>
+      <div className="container">
+        <NavBar username={username} />
+        <Main />
+      </div>
+    </OrderPageStyled>
   )
 }
 
