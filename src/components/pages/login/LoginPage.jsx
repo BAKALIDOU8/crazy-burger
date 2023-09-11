@@ -21,7 +21,7 @@ const LoginPageStyled = styled.div`
   flex-direction: column;
   ::before{
     content: "";
-    background: url(/public/img/burger-background.jpg) ;
+    background: url(/img/burger-background.jpg) ;
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
