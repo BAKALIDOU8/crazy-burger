@@ -1,20 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import NavBarRightSide from './NavBarRightSide';
 
-export default function NavBar({ username }) {
+export default function NavBar() {
   return (
     <NavBarStyled>
       <div className="left-side">
         Left
       </div>
-      <div className="right-side">
-        Right
-        <h1>Bonjour {username} </h1>
-        <Link to="/" >
-        <button>Déconnexion</button>
-        </Link>
-      </div>
+    <NavBarRightSide username={"username"} />
     </NavBarStyled>
   )
 }
@@ -30,7 +24,5 @@ const NavBarStyled = styled.nav`
     background: pink;
   }
 
-  .right-side{
-    background: purple;
-  }
+
 `;
