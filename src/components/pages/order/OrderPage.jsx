@@ -22,16 +22,14 @@ export default function OrderPage() {
 }
 
 const OrderPageStyled = styled.div`
-  background-color: yellow;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .container {
-    background-color: red;
-    height: 93vh;
-    width: 170vh;
+    height: 108vh;
+    width: 195vh;
     display: flex;
     flex-direction: column;
   }

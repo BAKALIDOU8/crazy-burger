@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 export default function NavBarRightSide({username}) {
     return (
         <NavBarRightSideStyled>
-            Right
             <h1>Bonjour {username} </h1>
             <Link to="/" >
                 <button>Déconnexion</button>
@@ -16,5 +15,5 @@ export default function NavBarRightSide({username}) {
 }
 
 const NavBarRightSideStyled = styled.div`
-    background: purple;
+    
 `;

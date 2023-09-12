@@ -10,6 +10,5 @@ export default function Main() {
 }
 
 const MainStyled = styled.div`
-      background: green;
     flex: 1;
 `;

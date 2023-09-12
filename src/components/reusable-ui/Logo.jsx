@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components';
 import { theme } from '../../theme';
-export default function Logo() {
-  return ( <LogoStyled>
-    
-        <h1> CRAZY</h1>
-        <img src="/img/logo-orange.png" alt="Logo crazy burger" />
-        <h1> BURGER</h1> 
-    
 
-    </LogoStyled>
+export default function Logo({className}) {
+  return (<LogoStyled className={className} >
+
+    <h1> CRAZY</h1>
+    <img src="/img/logo-orange.png" alt="Logo crazy burger" />
+    <h1> BURGER</h1>
+
+  </LogoStyled>
   )
 }
 
@@ -22,7 +22,7 @@ h1{
     display: inline;
     text-align: center;
     color: ${theme.colors.primary};
-    font-size: 90px;
+    font-size: 40px;
     line-height: 1em;
     font-weight: 700;
     text-transform: uppercase;
@@ -32,8 +32,8 @@ h1{
 img{
     object-fit: contain;
     object-position: center;
-    height: 90px;
-    width: 120px;
-    margin: 0%.5px;
+    height: 60px;
+    width: 80px;
+    margin: 0.5px;
   }
 `;
