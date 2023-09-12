@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom"
 import styled from 'styled-components';
 import NavBar from "./NavBar";
 import Main from "./Main";
+import { theme } from "../../../theme";
 
 export default function OrderPage() {
   // state
@@ -28,10 +29,12 @@ const OrderPageStyled = styled.div`
   align-items: center;
 
   .container {
-    height: 104vh;
-    width: 195vh;
+    height: 103vh;
+    width: 200vh;
     display: flex;
     flex-direction: column;
+    border-radius: 20px;
+    background: #FFFF;
   }
 
 `;
