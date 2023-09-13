@@ -27,6 +27,7 @@ const OrderPageStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background:${theme.colors.primary};
 
   .container {
     height: 103vh;
