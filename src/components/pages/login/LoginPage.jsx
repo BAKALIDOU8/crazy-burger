@@ -7,7 +7,7 @@ export default function LoginPage() {
   // render 
   return ( 
   <LoginPageStyled>
-    <Logo/>
+    <Logo className={"logo-login-page"} />
     <LoginForm/>
   </LoginPageStyled>
   )
@@ -21,7 +21,7 @@ const LoginPageStyled = styled.div`
   flex-direction: column;
   ::before{
     content: "";
-    background: url(/public/img/burger-background.jpg) ;
+    background: url(/img/burger-background.jpg) ;
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
@@ -32,6 +32,18 @@ const LoginPageStyled = styled.div`
     right: 0;
     bottom: 0;
     z-index: -1;
+  }
+
+  .logo-login-page{
+    h1{
+      font-size: 95px;
+      width: 200px;
+    }
+    img{
+      height: 200px;
+      width: 200px;
+    }
+    
   }
 `;
 
