@@ -23,14 +23,14 @@ export default function OrderPage() {
 }
 
 const OrderPageStyled = styled.div`
-  height: 100vh;
+  height: 107vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .container {
     height: 103vh;
-    width: 200vh;
+    width: 190vh;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
