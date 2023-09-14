@@ -5,13 +5,13 @@ import Logo from '../../reusable-ui/Logo'
 import { theme } from '../../../theme';
 import { refreshPage } from '../../../utils/window';
 
-export default function NavBar() {
+export default function NavBar({username}) {
   return (
     <NavBarStyled>      
       <div className="left-side">
         <Logo className="logo-order-page" onClick={refreshPage} />
       </div>
-    <NavBarRightSide username={"username"} />
+    <NavBarRightSide username={username} />
     </NavBarStyled>
   )
 }
