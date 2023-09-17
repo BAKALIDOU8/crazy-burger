@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components';
 import NavBarRightSide from './NavBarRightSide';
-import Logo from '../../reusable-ui/Logo'
-import { theme } from '../../../theme';
-import { refreshPage } from '../../../utils/window';
+import Logo from '../../../reusable-ui/Logo'
+import { theme } from '../../../../theme';
+import { refreshPage } from '../../../../utils/window';
 
-export default function NavBar({username}) {
+export default function NavBar({ username }) {
   return (
-    <NavBarStyled>      
+    <NavBarStyled>
       <div className="left-side">
         <Logo className="logo-order-page" onClick={refreshPage} />
       </div>
-    <NavBarRightSide username={username} />
+      <NavBarRightSide username={username} />
     </NavBarStyled>
   )
 }

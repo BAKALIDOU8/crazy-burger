@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components';
-import { theme } from '../../../theme';
+import { theme } from '../../../../theme';
 
 export default function Main() {
     return (
-    <MainStyled>
-        <div className="basket">Baskets</div>
-        <div className="menu">Menu</div>
-            
-    </MainStyled>
+        <MainStyled>
+            <div className="basket">Baskets</div>
+            <div className="menu">Menu</div>
+
+        </MainStyled>
     )
 }
 
@@ -31,4 +31,3 @@ const MainStyled = styled.div`
     }
 
     `
- 
