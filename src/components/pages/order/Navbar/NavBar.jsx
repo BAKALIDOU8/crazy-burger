@@ -23,8 +23,10 @@ const NavBarStyled = styled.nav`
   align-items: center;
   padding: 10px 10px;
   margin-top: 3px;
+ 
   border-top-left-radius: ${theme.borderRadius.extraRound};
   border-top-right-radius: ${theme.borderRadius.extraRound};
+  border-bottom: 1px solid ${theme.colors.greyLight};
   
   .logo-order-page{
     cursor: pointer;
