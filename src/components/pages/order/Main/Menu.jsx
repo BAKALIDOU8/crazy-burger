@@ -7,7 +7,7 @@ import Products from './Products';
 
 export default function Menu() {
 
-  const [menu, setMenu] = useState(fakeMenu2)
+  const [menu, setMenu] = useState(fakeMenu1)
 
   return ( <MenuStyled className='menu' >
       {menu.map((produit) => {
