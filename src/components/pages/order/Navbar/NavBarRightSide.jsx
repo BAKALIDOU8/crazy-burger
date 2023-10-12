@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import Profile from './Profile';
 
 
 export default function NavBarRightSide({ username }) {
     return (
         <NavBarRightSideStyled>
-            {/* <div className="admin-button">Admin Button</div> */}
+            <div className="admin-button">Admin Button</div>
             <Profile username={username} />
         </NavBarRightSideStyled>
     )
@@ -18,9 +17,9 @@ const NavBarRightSideStyled = styled.div`
     align-items: center;
     padding-right: 50px;
     
-    /*.admin-button{
+    .admin-button{
         background: lightblue;
-    }*/
+    }
 
     
 `;
