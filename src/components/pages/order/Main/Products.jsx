@@ -39,7 +39,7 @@ const ProductStyled = styled.div`
     }
   }
 
-  .description{
+    .info-text{
       border: 1px solid blue;
     }
 
