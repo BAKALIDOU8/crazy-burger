@@ -26,11 +26,4 @@ const MenuStyled = styled.div`
   padding: 50px 50px 150px;
   justify-items: center;
 
-
-
-
-
-  .description{
-      border: 1px solid fuchsia;
-    }
 `;

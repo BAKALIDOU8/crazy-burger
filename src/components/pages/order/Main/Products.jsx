@@ -33,4 +33,8 @@ const ProductStyled = styled.div`
     }
   }
 
+  .description{
+      border: 1px solid fuchsia;
+    }
+
 `;
