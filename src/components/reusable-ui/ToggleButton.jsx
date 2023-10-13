@@ -1,6 +1,7 @@
 import React from "react"
-import styled from "styled-components/macro"
+import styled from 'styled-components';
 import { theme } from "../../theme"
+
 
 export default function ToggleButton({
   isChecked,
@@ -43,7 +44,7 @@ const ToggleButtonStyled = styled.div`
       height: 40px;
       width: 200px;
       position: relative;
-      font-size: ${theme.fonts.size.XXS};
+      font-size: ${theme.fonts.size.S};
       letter-spacing: 0.5px;
       border: 2px solid ${theme.colors.background_dark};
       padding: 0;
