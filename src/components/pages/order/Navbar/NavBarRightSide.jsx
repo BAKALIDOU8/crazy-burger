@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import Profile from './Profile';
 
 
+
 export default function NavBarRightSide({ username }) {
     return (
         <NavBarRightSideStyled>
-            <div className="admin-button">Admin Button</div>
+            <div className="admin-button">   </div>
             <Profile username={username} />
         </NavBarRightSideStyled>
     )
