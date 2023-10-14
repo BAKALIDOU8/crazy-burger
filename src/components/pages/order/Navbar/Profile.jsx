@@ -29,6 +29,7 @@ const ProfileStyled = styled.div`
   align-items: center;
   justify-content: space-between;
   font-family: "Open Sans", sans-serif;
+  padding-left: 50px;
   /* min-width: 100px; */
 
   .info {
