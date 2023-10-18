@@ -2,14 +2,21 @@ import React from 'react'
 import styled from 'styled-components';
 import { theme } from '../../../../theme';
 import Menu from './menu';
+import Admin from './Admin/Admin';
+import { useContext } from 'react';
+import OrderContext from "../../../../context/OrderContext"
 
 export default function Main() {
+
+    const { isModeAdmin, setIsModeAdmin } = useContext(OrderContext)
+
+
     return (
         <MainStyled>
             {/* <div className="basket">Baskets</div> */}
             <div className="menu-and-admin">
                 <Menu />
-                <div className="admin">Admin</div>
+                {isModeAdmin && <Admin/> }
             </div>
         </MainStyled>
     )
@@ -38,14 +45,7 @@ const MainStyled = styled.div`
         border-bottom-left-radius: ${theme.borderRadius.extraRound};
         border-bottom-right-radius: ${theme.borderRadius.extraRound};
 
-     .admin{
-        background: red;
-        position: absolute;
-        height: 250px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
+
     }
 
 
