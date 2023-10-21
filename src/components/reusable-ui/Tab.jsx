@@ -6,7 +6,7 @@ import { theme } from '../../theme'
 export default function Tab({label, Icon, onClick, className}) {
   return (
     <TabStyled onClick={onClick} className={className}>
-        <div className='icon'>{Icon}</div> 
+        {Icon && <div className='icon'>{Icon}</div> }
         {label && <span className='label' >{label}</span>}       
     </TabStyled>
   )
@@ -15,6 +15,7 @@ export default function Tab({label, Icon, onClick, className}) {
 const TabStyled = styled.button`
     height: 43px;
     padding: 0 22px;
+    border: 1px solid blue;
 
     cursor: pointer;
 
@@ -40,6 +41,7 @@ const TabStyled = styled.button`
 
     :hover{
         border-bottom: 2px solid white;
+        text-decoration: underline;
     }
 
     .icon{

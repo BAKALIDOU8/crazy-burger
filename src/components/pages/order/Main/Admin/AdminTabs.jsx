@@ -1,39 +1,51 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components';
-import Tab from '../../../../reusable-ui/Tab';
-import { FiChevronDown, FiChevronUp} from 'react-icons/fi';
-import { AiOutlinePlus } from 'react-icons/ai';
+import Tab from "../../../../reusable-ui/Tab"
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import { theme } from '../../../../../theme';
+import OrderContext from "../../../../../context/OrderContext"
+import { tabsConfig } from './tabsConfig';
 
+export default function AdminTabs() {
+  const { isCollapsed, setIsCollapsed, currentTabSelected, setCurrentTabSelected } =
+    useContext(OrderContext)
 
-export default function AdminTabs({isCollapsed, setIsCollapsed}) {
-  const handleClick = () => {
-    setIsCollapsed(!isCollapsed)
+  const selectTab = (tabSelected) => {
+    setIsCollapsed(false) // ouvre moi le panel dans tous les cas
+    setCurrentTabSelected(tabSelected) // réactualise l'onglet sélectionné
   }
+
+  const tabs = tabsConfig
+
+  // affichage
   return (
     <AdminTabsStyled>
-      <Tab 
-          label=""
-          Icon={isCollapsed ? <FiChevronUp/> : <FiChevronDown/> } 
-          onClick={handleClick} 
-          className={isCollapsed ? "is-active" : ""}/>
       <Tab
-          label="Ajouter un produit" 
-          Icon={<AiOutlinePlus/>} 
-          onClick={handleClick} 
-          className={isCollapsed ? "is-active" : ""}/>
+        Icon={isCollapsed ? <FiChevronUp /> : <FiChevronDown />}
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className={isCollapsed ? "is-active" : ""}
+      />
+      {tabs.map((tab) => (
+        <Tab
+          key={tab.index}
+          label={tab.label}
+          Icon={tab.Icon}
+          onClick={() => selectTab(tab.index)}
+          className={currentTabSelected === tab.index ? "is-active" : ""}
+        />
+      ))}
     </AdminTabsStyled>
   )
 }
 
 const AdminTabsStyled = styled.div`
     display: flex;
-    padding: 0 20px;
 
     .is-active{
       background: ${theme.colors.background_dark};   
       border-color: ${theme.colors.white};
       color: ${theme.colors.white};
+      border-bottom: 2px;
     }
 
     button{
