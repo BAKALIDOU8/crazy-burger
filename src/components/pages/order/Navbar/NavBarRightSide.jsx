@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components';
 import Profile from './Profile';
-import { useState } from 'react'
+import { useContext } from 'react'
 import { theme } from '../../../../theme';
 import ToggleButton from '../../../reusable-ui/ToggleButton';
 import {ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import {FaUserSecret} from 'react-icons/fa'
+import OrderContext from '../../../../context/OrderContext';
 
 
-export default function NavBarRightSide({ username }) {
-    const [isModeAdmin, setisModeAdmin] = useState(false)
+export default function NavBarRightSide() {
+    const { isModeAdmin, setIsModeAdmin } = useContext(OrderContext)
 
     const displayToastNotification = () => {
         if (!isModeAdmin){
@@ -26,18 +27,19 @@ export default function NavBarRightSide({ username }) {
             progress: undefined,
         })
         }
-        setisModeAdmin(!isModeAdmin)
+        setIsModeAdmin(!isModeAdmin)
     }
 
     
     return (
         <NavBarRightSideStyled>
             <ToggleButton 
+                isChecked={isModeAdmin}
                 labelIfUnchecked='ACTIVER LE MODE ADMIN' 
                 labelIfChecked='DESACTIVER LE MODE ADMIN'
                 onToggle={displayToastNotification} 
             />
-            <Profile username={username} />
+            <Profile/>
             <ToastContainer className="toaster" bodyClassName="body-toast" />
         </NavBarRightSideStyled>
     )

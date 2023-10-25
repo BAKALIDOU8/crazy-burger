@@ -4,6 +4,10 @@
   background: #ffa01b;
 }
 
+body{
+  box-sizing: border-box;
+}
+
 
 
 
